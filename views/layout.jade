@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        h1= title
+        h3= subtitle
+        block content
+            p API-2 Fetch results:
+            each res in results
+                div.quote
+                    p.quote-text!= '"' + res.text + '"'
+                    p.quote-author!= '~' + res.author
